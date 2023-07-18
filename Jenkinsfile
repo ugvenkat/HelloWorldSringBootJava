@@ -1,4 +1,4 @@
-@Library('import my-shared-library') _
+@Library('my-shared-library') _
 
 pipeline {
     tools {
