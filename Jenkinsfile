@@ -1,10 +1,12 @@
+
+
 pipeline {
     tools {
         maven '3.6.3'
         jdk '17.0.7'
     }
     agent any
-    stages {
+    stages {ster
         stage ('Java Check') {
             steps {
                 sh 'java --version'
@@ -19,7 +21,11 @@ pipeline {
         stage ('Git Checkout') {
             steps {
                 script{
-                   git branch: 'main', url:'https://github.com/ugvenkat/HelloWorldSringBootJava.git'
+                   //git branch: 'main', url:'https://github.com/ugvenkat/HelloWorldSringBootJava.git'
+                   gitCheckout(
+                            branch:"main"
+                            url:"https://github.com/ugvenkat/HelloWorldSringBootJava.git"
+
                 }
             }
         }
