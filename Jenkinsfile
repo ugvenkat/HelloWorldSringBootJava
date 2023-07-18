@@ -5,16 +5,24 @@ pipeline {
     }
     agent any
     stages {
-        stage ('Java Version') {
+        stage ('Java Check') {
             steps {
                 sh 'java --version'
             }
         }
-        stage ('Maven Version') {
+        stage ('Maven Check') {
             steps {
                 sh 'mvn --version'
             }
         }
-        
+
+        stage ('Git Checkout') {
+            steps {
+                script{
+                   git branch: 'main', url:'https://github.com/ugvenkat/HelloWorldSringBootJava.git'
+                }
+            }
+        } 
+
     }
 }
