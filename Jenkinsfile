@@ -23,8 +23,9 @@ pipeline {
                 script{
                    //git branch: 'main', url:'https://github.com/ugvenkat/HelloWorldSringBootJava.git'
                    gitCheckout(
-                            branch:"main"
-                            url:"https://github.com/ugvenkat/HelloWorldSringBootJava.git"
+                            branch:" main"
+                            url: "https://github.com/ugvenkat/HelloWorldSringBootJava.git"
+                   )
 
                 }
             }
