@@ -6,7 +6,7 @@ pipeline {
         jdk '17.0.7'
     }
     agent any
-    stages {ster
+    stages {
         stage ('Java Check') {
             steps {
                 sh 'java --version'
