@@ -119,12 +119,13 @@ pipeline{
                 sh "docker image push ${params.DockerHubUser}/${params.project}:${params.ImageTag}"
             }
         }
+    }  // Stages
 
-        post {
-          always {
-            sh 'docker logout'
-            }
+    post {
+        always {
+           sh 'docker logout'
         }
+    }
 
 /*
 
@@ -149,5 +150,5 @@ pipeline{
 */   
 
 
-    }
-}
+    
+} //Pipeline
