@@ -16,17 +16,6 @@ pipeline{
 
     stages{
 
-        stage ('Echo dockerPassword') {
-            steps {
-                DockerHubPassword = credentials('dockerhubPassword')
-                sh 'echo DockerHubPassword'
-            }
-        }
-
-
-
-
-
         stage ('Java Check') {
             steps {
                 sh 'java --version'
